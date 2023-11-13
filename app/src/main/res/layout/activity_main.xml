@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabNewTab"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/new_tab"
+        tools:ignore="RelativeOverlap"
+        android:src="@android:drawable/ic_input_add"
+        />
+
+    <TextView
+        android:id="@+id/textNewTab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp"
+        android:text="New Tab"
+        android:visibility="visible"
+        tools:ignore="HardcodedText"
+        tools:visibility="visible" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/urlBarLayout"
+        android:layout_marginTop="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/urlBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tabLayout"
+        android:background="?android:attr/windowBackground">
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/editTextUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enterurl"
+            android:inputType="textUri"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:background="@drawable/edit_text_border"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/go"
+            android:onClick="onGoButtonClick"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AssignmentWebBrowser</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_tab">New Tab</string>
+    <string name="enter_url">Enter URL</string>
+    <string name="go">Go</string>
+    <string name="enterurl">Enter URL</string>
+</resources>
